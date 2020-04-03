@@ -1,0 +1,15 @@
+syntax ="proto3";
+
+message PolynomialInput{
+    float x = 1;
+}
+
+message PolynomialOutput{
+    float res_x = 1;
+    float res_y = 2;
+
+}
+
+service Polynomial{
+    rpc Solve(PolynomialInput) returns (PolynomialOutput) {}
+}
